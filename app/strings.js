@@ -10,12 +10,13 @@ exports.stringsAnswers = {
     var strArr = [];
     strArr = str.split(' ');
     var formatedStr = '';
-    var formatedStr = strArr[0];
+    formatedStr = strArr[0];
 
     for (var i = 1; i < strArr.length; i++) {
       if (strArr[i].length > cols) {
         formatedStr = formatedStr + '\n' + strArr[i];
       } else {
+        // eslint-disable-next-line no-lonely-if
         if (formatedStr.length + strArr[i].length > cols) {
           formatedStr = formatedStr + '\n' + strArr[i];
         } else {
