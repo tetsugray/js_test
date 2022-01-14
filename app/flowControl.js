@@ -12,14 +12,20 @@ exports.flowControlAnswers = {
     // was provided or the value provided is not a number
     if (isNaN(num)) {
       return false;
-    } else if (num % 3 === 0 && num % 5 === 0) {
-      return 'fizzbuzz';
-    } else if (num % 5 === 0) {
-      return 'buzz';
-    } else if (num % 3 === 0) {
-      return 'fizz';
-    } else {
-      return num;
     }
+
+    if (num % 3 === 0 && num % 5 === 0) {
+      return 'fizzbuzz';
+    }
+
+    if (num % 5 === 0) {
+      return 'buzz';
+    }
+
+    if (num % 3 === 0) {
+      return 'fizz';
+    }
+
+    return num;
   }
 };
