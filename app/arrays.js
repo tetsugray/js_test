@@ -6,7 +6,12 @@ exports.arraysAnswers = {
   },
 
   sum: function(arr) {
-    return arr.reduce((sum, current) => sum + current, 0 );
+    var sum = 0;
+
+    for (var i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+    return sum;
   },
 
   remove: function(arr, item) {
